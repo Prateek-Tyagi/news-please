@@ -121,7 +121,7 @@ def __get_remote_index(warc_files_start_date):
             os.remove(temp_filename)
         except OSError:
             pass
-        warc_dates = __iterate_by_month(warc_files_start_date, datetime.datetime(2020,5,1))
+        warc_dates = __iterate_by_month(warc_files_start_date, datetime.datetime(2020,3,21))
         for date in warc_dates:
             __logger.info('-----DATE-------: %s', date)
             year = date.strftime('%Y')

@@ -18,7 +18,8 @@ from six.moves import urllib
 from warcio.archiveiterator import ArchiveIterator
 
 from .. import NewsPlease
-
+import datetime
+from datetime import date
 __author__ = "Felix Hamborg"
 __copyright__ = "Copyright 2017"
 __credits__ = ["Sebastian Nagel"]
@@ -34,7 +35,7 @@ class CommonCrawlExtractor:
     # start date (if None, any date is OK as start date), as datetime
     __filter_start_date = datetime.datetime(2020, 3, 1)
     # end date (if None, any date is OK as end date)
-    __filter_end_date =datetime.datetime(2020, 4, 30)
+    __filter_end_date =datetime.datetime(2020, 3, 20)
     # if date filtering is string, e.g., if we could not detect the date of an article, we will discard the article
     __filter_strict_date = True
     # if True, the script checks whether a file has been downloaded already and uses that file instead of downloading

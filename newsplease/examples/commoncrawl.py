@@ -44,7 +44,7 @@ my_filter_valid_hosts = []  # example: ['elrancaguino.cl']
 # start date (if None, any date is OK as start date), as datetime
 my_filter_start_date = datetime.datetime(2020, 3, 1)
 # end date (if None, any date is OK as end date), as datetime
-my_filter_end_date = datetime.datetime(2020, 4, 30)
+my_filter_end_date = datetime.datetime(2020, 3, 20)
 # if date filtering is strict and news-please could not detect the date of an article, the article will be discarded
 my_warc_files_start_date = datetime.datetime(2020, 3, 1)
 my_filter_strict_date = True
