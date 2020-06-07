@@ -121,9 +121,9 @@ def __get_remote_index(warc_files_start_date):
             os.remove(temp_filename)
         except OSError:
             pass
-
-        warc_dates = __iterate_by_month(warc_files_start_date, datetime.datetime.today())
+        warc_dates = __iterate_by_month(warc_files_start_date, datetime.datetime(2020,5,1))
         for date in warc_dates:
+            __logger.info('-----DATE-------: %s', date)
             year = date.strftime('%Y')
             month = date.strftime('%m')
             cmd += "aws s3 ls --recursive s3://commoncrawl/crawl-data/CC-NEWS/%s/%s/ --no-sign-request >> %s && " % (year, month, temp_filename)
