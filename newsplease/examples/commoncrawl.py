@@ -50,7 +50,7 @@ my_warc_files_start_date = datetime.datetime(2020, 3, 1)
 my_filter_strict_date = True
 # if True, the script checks whether a file has been downloaded already and uses that file instead of downloading
 # again. Note that there is no check whether the file has been downloaded completely or is valid!
-my_reuse_previously_downloaded_files = False
+my_reuse_previously_downloaded_files = True
 # continue after error
 my_continue_after_error = True
 # show the progress of downloading the WARC files

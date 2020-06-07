@@ -32,16 +32,16 @@ class CommonCrawlExtractor:
     # hosts (if None or empty list, any host is OK)
     __filter_valid_hosts = []  # example: ['elrancaguino.cl']
     # start date (if None, any date is OK as start date), as datetime
-    __filter_start_date = None
+    __filter_start_date = datetime.datetime(2020, 3, 1)
     # end date (if None, any date is OK as end date)
-    __filter_end_date = None
+    __filter_end_date =datetime.datetime(2020, 4, 30)
     # if date filtering is string, e.g., if we could not detect the date of an article, we will discard the article
     __filter_strict_date = True
     # if True, the script checks whether a file has been downloaded already and uses that file instead of downloading
     # again. Note that there is no check whether the file has been downloaded completely or is valid!
     __reuse_previously_downloaded_files = True
     # continue after error
-    __continue_after_error = False
+    __continue_after_error = True
     # log level
     __log_level = logging.INFO
     __delete_warc_after_extraction = True
@@ -55,8 +55,7 @@ class CommonCrawlExtractor:
     __callback_on_article_extracted = None
     # event handler called when a warc file is fully processed
     __callback_on_warc_completed = None
-    # if the download progress is shown
-    __show_download_progress = False
+    __show_download_progress = True
 
     # logging
     logging.basicConfig(level=__log_level)
